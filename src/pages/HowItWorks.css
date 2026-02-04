@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.how-it-works-page {
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header */
+.how-it-works-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
+  position: relative;
+  z-index: 10;
+}
+
+.how-it-works-header .header-left,
+.how-it-works-header .header-right {
+  color: #1a5f5f;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.how-it-works-header .header-right {
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.how-it-works-header .header-right:hover {
+  opacity: 0.8;
+}
+
+/* How It Works Section */
+.how-it-works-section {
+  padding: 80px 40px;
+  background-color: white;
+  text-align: center;
+}
+
+.how-it-works-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a5f5f;
+  margin-bottom: 60px;
+  letter-spacing: -0.5px;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.step-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 40px 30px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f9f9;
+  border-radius: 50%;
+}
+
+.step-icon .icon-airport,
+.step-icon .icon-telescope,
+.step-icon .icon-booking {
+  font-size: 40px;
+}
+
+.step-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a5f5f;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.step-description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Background Image Section */
+.background-image-section {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.scenic-background {
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/bgimg1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: #e8f5e9;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 56px;
+  font-weight: 700;
+  color: #1a5f5f;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.cta-description {
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.cta-button-purple {
+  background-color: #9c27b0;
+  color: white;
+  border: none;
+  padding: 20px 50px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3);
+}
+
+.cta-button-purple:hover {
+  background-color: #7b1fa2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(156, 39, 176, 0.4);
+}
+
+.cta-button-purple:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .how-it-works-title {
+    font-size: 40px;
+  }
+
+  .steps-container {
+    gap: 30px;
+  }
+
+  .step-card {
+    min-width: 250px;
+  }
+
+  .cta-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-it-works-header {
+    padding: 18px 24px;
+  }
+
+  .how-it-works-section {
+    padding: 60px 30px;
+  }
+
+  .how-it-works-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .steps-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .step-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .background-image-section {
+    height: 400px;
+  }
+
+  .cta-section {
+    padding: 60px 30px;
+  }
+
+  .cta-title {
+    font-size: 40px;
+  }
+
+  .cta-description {
+    font-size: 16px;
+  }
+
+  .cta-button-purple {
+    padding: 18px 40px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-it-works-header {
+    padding: 15px 20px;
+  }
+
+  .how-it-works-header .header-left,
+  .how-it-works-header .header-right {
+    font-size: 12px;
+  }
+
+  .how-it-works-section {
+    padding: 50px 20px;
+  }
+
+  .how-it-works-title {
+    font-size: 28px;
+    margin-bottom: 35px;
+  }
+
+  .step-card {
+    padding: 30px 20px;
+  }
+
+  .step-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+  }
+
+  .step-icon .icon-airport,
+  .step-icon .icon-telescope,
+  .step-icon .icon-booking {
+    font-size: 35px;
+  }
+
+  .step-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .step-description {
+    font-size: 14px;
+  }
+
+  .background-image-section {
+    height: 300px;
+  }
+
+  .cta-section {
+    padding: 50px 20px;
+  }
+
+  .cta-title {
+    font-size: 32px;
+  }
+
+  .cta-description {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .cta-button-purple {
+    padding: 16px 35px;
+    font-size: 14px;
+  }
+}
