@@ -1,38 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  background-color: #1a5f5f; /* Dark teal background */
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   display: flex;
   flex-direction: column;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.header-left,
+.header-right {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.header-right {
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.header-right:hover {
+  opacity: 0.8;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 120px 20px 80px;
+  min-height: 100vh;
+}
+
+.hero-section {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.headline {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.headline-line1 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.headline-line2 {
+  color: #ff6b35; /* Vibrant orange */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.subheadline {
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.cta-button {
+  background-color: #4caf50; /* Bright green */
+  color: white;
+  border: none;
+  padding: 18px 36px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+.button-icons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.airplane-icon {
+  font-size: 18px;
+}
+
+.plus-icon {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* As Seen In Section */
+.as-seen-in {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.as-seen-in-title {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: white;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.media-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.logo-item {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Live Kelly and Ryan Logo */
+.logo-live-kelly-ryan {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo-live {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+}
+
+.logo-kelly-ryan {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+/* New York Times Logo */
+.logo-nytimes {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+/* TODAY Logo */
+.logo-today {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-today-icon {
+  font-size: 24px;
+}
+
+.logo-today-text {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Good Morning America Logo */
+.logo-gma {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.logo-gma-middle {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* BuzzFeed Logo */
+.logo-buzzfeed {
+  background-color: white;
+  color: #1a5f5f;
+  padding: 8px 16px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 2px;
+  font-weight: 700;
+}
+
+.logo-buzz {
+  font-size: 20px;
+}
+
+.logo-feed {
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header-left,
+  .header-right {
+    font-size: 12px;
+  }
+
+  .headline {
+    font-size: 42px;
+  }
+
+  .subheadline {
+    font-size: 18px;
+  }
+
+  .main-content {
+    padding: 100px 20px 60px;
+  }
+
+  .media-logos {
+    gap: 30px;
+  }
+
+  .logo-item {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .headline {
+    font-size: 32px;
+  }
+
+  .subheadline {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    padding: 14px 28px;
+    font-size: 14px;
+  }
+
+  .media-logos {
+    flex-direction: column;
+    gap: 25px;
   }
 }
