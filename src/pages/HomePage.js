@@ -1,9 +1,11 @@
 import '../App.css';
+import { Link } from 'react-router-dom';
 import logo1 from '../img/logo1.png';
 import logo2 from '../img/logo2.png';
 import logo3 from '../img/logo3.png';
 import logo4 from '../img/logo4.png';
 import logo5 from '../img/logo5.png';
+
 
 function HomePage() {
   return (
@@ -24,12 +26,14 @@ function HomePage() {
           <p className="subheadline">
             Meet the travel membership that saves you hundreds on flights.
           </p>
-          <button className="cta-button">
-            <span>GET FREE FLIGHT ALERTS</span>
-            <span className="button-icons">
-              <span className="airplane-icon">✈</span>
-            </span>
-          </button>
+          <Link to="/how-it-works">
+            <button className="cta-button">
+              <span>GET FREE FLIGHT ALERTS</span>
+              <span className="button-icons">
+                <span className="airplane-icon">✈</span>
+              </span>
+            </button>
+          </Link>
         </div>
       </main>
 

@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../.idea"
+		},
+		{
+			"path": "../node_modules"
+		},
+		{
+			"path": "../public"
+		}
+	],
+	"settings": {}
+}

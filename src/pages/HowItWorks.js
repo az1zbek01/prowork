@@ -6,7 +6,7 @@ function HowItWorks() {
     <div className="how-it-works-page">
       {/* Header */}
       <header className="how-it-works-header">
-        <div className="header-left">FORMERLY SCOTT'S CHEAP FLIGHTS</div>
+        <Link to="/" className="header-left">FORMERLY SCOTT'S CHEAP FLIGHTS</Link>
         <div className="header-right">LOGIN</div>
       </header>
 
@@ -61,10 +61,12 @@ function HowItWorks() {
         <p className="cta-description">
           Most deals are 40-90% off normal prices with great itineraries from the best airlines. If it's not an amazing deal, we won't send it.
         </p>
-        <button className="cta-button-purple">
-          <span>GET FREE</span>
-          <span>FLIGHT</span>
-        </button>
+        <Link to="/">
+          <button className="cta-button-purple">
+            <span>GET FREE</span>
+            <span>FLIGHT</span>
+          </button>
+        </Link>
       </section>
     </div>
   );
