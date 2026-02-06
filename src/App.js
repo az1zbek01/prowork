@@ -26,7 +26,6 @@ function App() {
     if (w < 1024) return { slidesPerView: 5, cardWidth: 260, gap: 18 };
     return { slidesPerView: 5, cardWidth: 300, gap: 20 };
   };
-
   const [carouselConfig, setCarouselConfig] = useState(getCarouselConfig());
 
   useEffect(() => {
@@ -449,5 +448,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;
